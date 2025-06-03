@@ -15,13 +15,6 @@ if (! function_exists('teatro_el_eclipse_setup')) :
 
     function teatro_el_eclipse_setup()
     {
-
-        /* Availability for translations */
-        load_theme_textdomain('teatro-el-eclipse', get_template_directory() . '/languages');
-
-        /* Default RSS feed links for posts and comments in the <head> section */
-        add_theme_support('automatic-feed-links');
-
         /* Enable support for post thumbnails and featured images */
         add_theme_support('post-thumbnails');
 
@@ -34,7 +27,7 @@ if (! function_exists('teatro_el_eclipse_setup')) :
         /* Support for wp_nav_menu() function */
         register_nav_menus(
             array(
-                'primary' => esc_html__('Primary', 'teatro-el-eclipse')
+                'primary' => esc_html__('Primary')
             )
         );
 
@@ -64,15 +57,6 @@ if (! function_exists('teatro_el_eclipse_setup')) :
             'default-position-x'     => 'center',
             'default-size'           => 'cover',
         ]);
-
-        // Support for basic block styles
-        add_theme_support('wp-block-styles');
-
-        // Support for responsive embeds
-        add_theme_support('responsive-embeds');
-
-        // Support for wide alignment (align-wide) in blocks
-        add_theme_support('align-wide');
 
         /* Add support for selective refresh of widgets in the Customizer. */
         add_theme_support('customize-selective-refresh-widgets');

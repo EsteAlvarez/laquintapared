@@ -14,7 +14,7 @@
 
     <div class="mb-5">
         <?php the_excerpt(); ?>
-        <a class="search-post-link" href="<?php the_permalink(); ?>"><?php esc_html_e('Leer más', 'teatro-el-eclipse'); ?></a>
+        <a class="search-post-link" href="<?php the_permalink(); ?>"><?php esc_html_e('Leer más'); ?></a>
     </div>
 
 </article><!-- #post-<?php the_ID(); ?> -->

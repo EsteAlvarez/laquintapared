@@ -38,7 +38,7 @@
         <div class="text-block">
             <h2 class="text-capitalize"><?php echo esc_html(get_field('titulo_seccion_compania')); ?></h2>
             <p><?php echo wp_kses_post(get_field('contenido_seccion_compania')); ?></p>
-            <a class="link-sections-home" href="<?php echo site_url('/sobre-nosotros'); ?>"><?php echo esc_html('Conoce a quienes hacen posible esta historia', 'teatro-el-eclipse') ?></a>
+            <a class="link-sections-home" href="<?php echo site_url('/sobre-nosotros'); ?>"><?php echo esc_html('Conoce a quienes hacen posible esta historia') ?></a>
         </div>
         <div class="image-block">
             <?php if (get_field('imagen_seccion_compania')): ?>
@@ -53,7 +53,7 @@
         <div class="text-block">
             <h2 class="text-capitalize"><?php echo esc_html(get_field('titulo_seccion_infraestructura')); ?></h2>
             <p><?php echo wp_kses_post(get_field('contenido_seccion_infraestructura')); ?></p>
-            <a class="link-sections-home" href="<?php echo site_url('/nuestro-teatro'); ?>"><?php echo esc_html('Conoce nuestro teatro', 'teatro-el-eclipse') ?></a>
+            <a class="link-sections-home" href="<?php echo site_url('/nuestro-teatro'); ?>"><?php echo esc_html('Conoce nuestro teatro') ?></a>
         </div>
     </section>
 

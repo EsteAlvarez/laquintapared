@@ -38,14 +38,14 @@
     </section>
 
     <section class="container-section margins-sections"><!-- Sinapsis -->
-        <h2><?php esc_html_e('Sinopsis', 'teatro-el-eclipse') ?></h2>
+        <h2><?php esc_html_e('Sinopsis') ?></h2>
         <?php the_content(); ?>
     </section>
 
     <section class="container-section margins-sections"><!-- Recomendaciones -->
-        <h2><?php esc_html_e('Recomendaciones', 'teatro-el-eclipse') ?></h2>
+        <h2><?php esc_html_e('Recomendaciones') ?></h2>
         <p class="mb-5"><?php echo wp_kses_post(get_field('recomendaciones')); ?></p>
-        <a class="link-ticket fs-5" href="<?php echo esc_attr(get_field('enlace_a_ticketera')); ?>" target="_blank"><?php esc_html_e('Comprar Entrada', 'teatro-el-eclipse') ?></a>
+        <a class="link-ticket fs-5" href="<?php echo esc_attr(get_field('enlace_a_ticketera')); ?>" target="_blank"><?php esc_html_e('Comprar Entrada') ?></a>
     </section>
 
 </div><!-- #post-<?php the_ID(); ?> -->

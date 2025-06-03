@@ -30,7 +30,7 @@
             <?php
             edit_post_link(
                 sprintf(
-                    __('Editar<span> "%s"</span>', 'teatro-el-eclipse'),
+                    __('Editar<span> "%s"</span>'),
                     get_the_title()
                 ),
                 '<span>',

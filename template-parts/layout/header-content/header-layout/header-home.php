@@ -9,7 +9,7 @@
 <div class="header-desktop-container" <?php if (has_post_thumbnail()) { ?> style="background-image: url(<?php the_post_thumbnail_url(); ?>);" <?php } ?>>
 
     <!-- Nav Container -->
-    <nav class="navigation-desktop-container" aria-label="<?php esc_attr_e('Menú principal', 'teatro-el-eclipse'); ?>">
+    <nav class="navigation-desktop-container" aria-label="<?php esc_attr_e('Menú principal'); ?>">
         <?php wp_nav_menu(array(
             'theme_location' => 'primary',
             'menu_class' => 'navigation-desktop-container__menu-list',
@@ -43,7 +43,7 @@
                 <div class="ps-2">
                     <?php get_search_form(); ?>
                 </div>
-                <nav class="theme-navigation-mobile" aria-label="<?php esc_attr_e('Menú de navegación móvil', 'teatro-el-eclipse'); ?>">
+                <nav class="theme-navigation-mobile" aria-label="<?php esc_attr_e('Menú de navegación móvil'); ?>">
                     <?php wp_nav_menu(array(
                         'theme_location' => 'primary',
                         'menu_class' => 'theme-navigation-mobile__menu-list',
