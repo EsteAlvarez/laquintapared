@@ -1,0 +1,189 @@
+/* Índice
+   --------------------------------------------------
+   1. Navegación Desktop
+   2. Navegación Mobile
+   3. Media Querys
+   ================================================== */
+
+/* 1. Navegación Desktop
+     -------------------------------------------------- */
+.header-desktop-container {
+  min-height: 100dvh;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-position: center;
+  background-size: cover;
+}
+
+.navigation-desktop-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  min-height: 10dvh;
+}
+
+.navigation-desktop-container__menu-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-desktop-container__menu-list,
+.teatro-el-eclipse-sub-menu {
+  list-style: none;
+}
+
+.navigation-desktop-container__menu-list li > a {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  text-decoration: none;
+  color: #fcfcf7;
+  transition: 0.5s;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.navigation-desktop-container__menu-list li > a:hover {
+  color: #dadad8; /* Color de los enlaces */
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ffffff;
+  height: fit-content;
+  width: 270px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.searchbar input {
+  background-color: transparent;
+  border: none;
+  padding: 0.2rem;
+  color: #ebebeb;
+  outline: none;
+}
+
+.searchbar input::placeholder {
+  color: #ebebeb;
+}
+
+.searchbar button {
+  background-color: transparent;
+  border: none;
+}
+
+.text-content-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  min-height: 90dvh;
+}
+
+.logo {
+  font-family: "Sacramento", cursive;
+  text-decoration: none;
+  color: #c2b280;
+  font-size: 3.813rem;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.slogan {
+  font-family: "Cormorant Garamond", serif;
+  color: #fcfcf7;
+  width: 50%;
+  line-height: 1;
+  font-size: 3.813rem;
+  margin-bottom: 3rem;
+}
+
+.secondary-slogan {
+  color: #fcfcf7;
+  margin: 0;
+}
+
+/* 2. Navegación Mobile
+     -------------------------------------------------- */
+.header-mobile-container {
+  /*Contenedor menú mobile*/
+  display: none;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.menu-mobile-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.theme-navigation-mobile__menu-list {
+  list-style: none;
+  padding: 0%;
+  margin: 0%;
+}
+
+.theme-navigation-mobile__menu-list li > a {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 3. Media Querys
+     -------------------------------------------------- */
+@media (max-width: 1024px) {
+  .header-desktop-container {
+    display: none;
+  }
+  .header-mobile-container {
+    /*Contenedor menú mobile*/
+    display: block;
+  }
+  .text-content-header {
+    width: 85%;
+  }
+  .logo {
+    font-size: 3.5rem;
+  }
+  .slogan {
+    width: 80%;
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .header-desktop-container {
+    display: none;
+  }
+  .header-mobile-container {
+    /*Contenedor menú mobile*/
+    display: block;
+  }
+  .menu-mobile-container {
+    padding: 0.2rem;
+    width: 90%;
+  }
+  .text-content-header {
+    width: 90%;
+  }
+  .logo {
+    font-size: 3rem;
+  }
+  .slogan {
+    width: 90%;
+    font-size: 3rem;
+  }
+}

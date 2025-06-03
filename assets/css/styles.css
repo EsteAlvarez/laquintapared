@@ -1,0 +1,340 @@
+/* General Styles */
+
+/* Index
+   --------------------------------------------------
+   1. General Styles
+   2. Font Styles
+   3. Responsive Styles
+   ================================================== */
+
+/* 1. General Styles
+   -------------------------------------------------- */
+:root {
+  --text-color: #5d5d5d;
+  --links-color: #111111;
+  --banner-color: #262626;
+  --text-font: "Montserrat", sans-serif;
+  --title-font: "Cormorant Garamond", serif;
+}
+
+/* Basic reset */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+/* Set fonts and typography */
+body {
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.container-section {
+  width: 55%;
+  margin: 0 auto;
+}
+
+.margins-sections {
+  margin: 3.5rem auto;
+}
+
+.padding-section {
+  padding-top: 7rem;
+}
+
+p,
+span,
+ul {
+  color: var(--text-color);
+}
+
+.banner-hero {
+  min-height: 50vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.breadcrumbs > a {
+  color: var(--links-color);
+}
+
+/* Preloader
+     -------------------------------------------------- */
+.content-loader {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--links-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: 4;
+  --_g: no-repeat radial-gradient(circle closest-side, #fff 90%, #0000);
+  background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+  background-size: calc(100% / 3) 100%;
+  animation: l7 1s infinite linear;
+}
+
+@keyframes l7 {
+  33% {
+    background-size: calc(100% / 3) 0%, calc(100% / 3) 100%, calc(100% / 3) 100%;
+  }
+  50% {
+    background-size: calc(100% / 3) 100%, calc(100% / 3) 0%, calc(100% / 3) 100%;
+  }
+  66% {
+    background-size: calc(100% / 3) 100%, calc(100% / 3) 100%, calc(100% / 3) 0%;
+  }
+}
+
+/* Font Styles
+     -------------------------------------------------- */
+p,
+span,
+a {
+  font-family: var(--text-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+.post-date,
+.link-ticket,
+.pagination-cartelera > a,
+.pagination-cartelera > span {
+  font-family: var(--title-font);
+  font-weight: 700;
+}
+
+/* Home Page
+     -------------------------------------------------- */
+.image-post-container {
+  aspect-ratio: 1/1;
+  background-position: center;
+  background-size: cover;
+}
+
+.dates-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+}
+
+.post-date,
+.search-title {
+  font-family: var(--title-font);
+}
+
+.post-day {
+  font-size: 300%;
+}
+
+.events-section {
+  min-height: 50vh;
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 4rem;
+  padding: 2rem;
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.link-sections-home,
+.search-post-link {
+  color: var(--links-color);
+}
+
+/* Cartelera
+     -------------------------------------------------- */
+.pagination-cartelera > a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 150%;
+}
+
+.pagination-cartelera span {
+  color: var(--links-color);
+  font-weight: 600;
+  font-size: 150%;
+}
+
+/* Nuestro Teatro
+     -------------------------------------------------- */
+.img-teather-direction {
+  width: 100%;
+  max-height: 55vh;
+  object-fit: cover;
+}
+
+/* Contacto
+     -------------------------------------------------- */
+.form-container p > label,
+input,
+textarea {
+  width: 100%;
+}
+
+.form-container p > .btn-form-submit {
+  background-color: var(--links-color);
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  max-width: 200px;
+  border-radius: 0;
+}
+
+/* Sobre Nosotros
+     -------------------------------------------------- */
+.banner-img-about-us {
+  max-height: 55vh;
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+}
+
+.img-team-direction {
+  max-height: 55vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Footer
+     -------------------------------------------------- */
+.footer {
+  background-color: var(--links-color);
+}
+
+.footer-widgets div > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-widgets div > p {
+  color: #fff;
+}
+
+.footer ul > li {
+  color: white;
+}
+
+/* Single */
+.link-ticket {
+  background-color: var(--banner-color);
+  color: white;
+  padding: 0.7rem;
+  text-decoration: none;
+}
+
+.footer-nav div ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-family: var(--title-font);
+}
+
+.footer-nav div ul li a {
+  text-decoration: none;
+  font-family: var(--title-font);
+  color: #ffffff;
+  font-size: 1.375rem;
+}
+
+.rrss-widget .rrss-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.rrss-widget .rrss-item-footer {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 40px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1;
+}
+
+/* Search
+     -------------------------------------------------- */
+.search-post-title {
+  font-family: var(--title-font);
+  color: var(--links-color);
+  text-decoration: none;
+}
+
+/* 3. Responsive Styles
+     -------------------------------------------------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .container-section {
+    width: 70%;
+  }
+  .grid-section {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: unset;
+    padding: 0;
+  }
+  .home-section {
+    max-width: 85%;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 768px) {
+  .container-section {
+    width: 90%;
+  }
+  .home-section {
+    max-width: 90%;
+  }
+  .footer-nav div ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .rrss-widget .rrss-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
